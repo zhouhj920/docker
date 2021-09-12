@@ -1,6 +1,5 @@
 # Docker
 
-![image-20200606203315597](E:/docker/docker_learning-master/Docker.assets/image-20200606203315597.png)
 
 ## 参考资料
 
@@ -46,8 +45,6 @@ Docker通过隔离机制，可以将服务器利用到极致
 
 #### 虚拟机原理示意图
 
-![image-20200606205436434](E:/docker/docker_learning-master/Docker.assets/image-20200606205436434.png)
-
 缺点：
 
 1. 资源占用多
@@ -58,9 +55,6 @@ Docker通过隔离机制，可以将服务器利用到极致
 
 不是模拟的完整的操作系统
 
-![image-20200606205739655](E:/docker/docker_learning-master/Docker.assets/image-20200606205739655.png)
-
-#### 二者对比
 
 比较虚拟机和Docker的不同
 
@@ -75,7 +69,6 @@ Docker通过隔离机制，可以将服务器利用到极致
 
 ### Docker的基本组成
 
-![image-20200606212250845](E:/docker/docker_learning-master/Docker.assets/image-20200606212250845.png)
 
 明确几个概念：
 
@@ -99,16 +92,6 @@ Docker通过隔离机制，可以将服务器利用到极致
 2. CentOS 7
 3. 使用Mobaxteam链接远程服务器或Xshell
 
-### 安装xshell
-
-下载CentOS7 https://www.jianshu.com/p/a63f47e096e8
-
-下载VMware 360软件管家下载
-
-VMware配置虚拟机 https://blog.csdn.net/babyxue/article/details/80970526
-
-xshell链接服务器 https://blog.csdn.net/zzy1078689276/article/details/77280814
-
 ### Centos安装
 
 https://docs.docker.com/engine/install/centos/
@@ -128,7 +111,6 @@ $ sudo yum remove docker \
 
 ```
 
-![image-20200608092628498](E:/docker/docker_learning-master/Docker.assets/image-20200608092628498.png)
 
 ### 安装基本环境
 
@@ -141,7 +123,6 @@ $ sudo yum install -y yum-utils
 
 !
 
-![image-20200608093114774](E:/docker/docker_learning-master/Docker.assets/image-20200608093114774.png)
 
 ### 设置镜像的仓库
 
@@ -162,7 +143,6 @@ $ sudo yum-config-manager \
     https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo # 阿里云镜像
 ```
 
-![image-20200616145430166](E:/docker/docker_learning-master/Docker.assets/image-20200616145430166.png)
 
 直接复制粘贴就OK了
 
@@ -172,7 +152,6 @@ $ sudo yum-config-manager \
 yum makecache fast
 ```
 
-![image-20200616150014082](E:/docker/docker_learning-master/Docker.assets/image-20200616150014082.png)
 
 没有问题的话就是可以用的
 
@@ -184,9 +163,6 @@ yum install docker-ce docker-ce-cli containerd.io # docker-ce 社区版 ee 企�
 
 注意这里会有几个个y/n的判断
 
-![image-20200616150818860](E:/docker/docker_learning-master/Docker.assets/image-20200616150818860.png)
-
-![image-20200616150922549](E:/docker/docker_learning-master/Docker.assets/image-20200616150922549.png)
 
 要看到Complet再收手！
 
@@ -237,21 +213,16 @@ Server: Docker Engine - Community
 docker run hello-world
 ```
 
-![image-20200616151641013](E:/docker/docker_learning-master/Docker.assets/image-20200616151641013.png)
-
 中间一堆是签名信息
 
 run的运行流程图
 
-![image-20200616161441669](E:/docker/docker_learning-master/Docker.assets/image-20200616161441669.png)
 
 查看下载的镜像
 
 ```
 docker images
 ```
-
-![image-20200616151913277](E:/docker/docker_learning-master/Docker.assets/image-20200616151913277.png)
 
 ### 卸载Docker
 
@@ -278,9 +249,6 @@ sudo systemctl daemon-reload # 重启服务
 sudo systemctl restart docker # 重启docker
 ```
 
-![image-20200616160315298](E:/docker/docker_learning-master/Docker.assets/image-20200616160315298.png)
-
- ![img](https://kuangstudy.oss-cn-beijing.aliyuncs.com/bbs/2021/07/09/kuangstudy5851fdc5-b4f3-4bae-8011-254d61c9e7c1.png) 
 
 ## 底层原理
 
@@ -290,11 +258,8 @@ Docker是一个Client-Server结构的系统，Docker的守护进程在主机上�
 
 DockerServer接受到Docker-Client的指令，
 
-![image-20200616162107363](E:/docker/docker_learning-master/Docker.assets/image-20200616162107363.png)
 
 Docker为什么比VM快？
 
 1. Docker有着比虚拟机更少的抽象层
 2. docker主要用的是宿主机的内核，vm需要Guest OS
-
-![image-20200616162302653](E:/docker/docker_learning-master/Docker.assets/image-20200616162302653.png)
