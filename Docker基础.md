@@ -215,8 +215,6 @@ docker run hello-world
 
 中间一堆是签名信息
 
-run的运行流程图
-
 
 查看下载的镜像
 
